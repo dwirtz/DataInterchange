@@ -1,0 +1,28 @@
+syntax = "proto2";
+
+package demo;
+
+option java_package = "de.dwi.demo.protobuf.model";
+option java_outer_classname = "Model";
+
+message StopArea {
+    required string id = 1;
+    required StopAreaType type = 2;
+    repeated NetPoint point = 3;
+
+    enum StopAreaType {
+        A = 0;
+        B = 1;
+    }
+}
+
+message NetPoint {
+    required string id = 1;
+    required Location location = 2;
+}
+
+message Location {
+    required int64 gpsX = 1;
+    required int64 gpsY = 2;
+}
+
