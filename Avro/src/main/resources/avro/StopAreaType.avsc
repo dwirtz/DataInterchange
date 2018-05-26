@@ -1,0 +1,6 @@
+{
+"namespace" : "de.dwi.demo.avro.model",
+"type" : "enum",
+"name" : "StopAreaType",
+"symbols" : [ "A", "B" ]
+}

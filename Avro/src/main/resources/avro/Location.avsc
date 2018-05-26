@@ -1,0 +1,10 @@
+{
+"namespace" : "de.dwi.demo.avro.model",
+"type" : "record",
+"name" : "Location",
+"fields" :
+    [
+    {"name" : "gpsX", "type" : "long"},
+    {"name" : "gpsY", "type" : "long"}
+    ]
+}

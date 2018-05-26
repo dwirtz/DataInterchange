@@ -1,3 +1,4 @@
 rootProject.name = 'DataInterchange'
 include 'Protobuf'
+include 'Avro'
 

@@ -1,0 +1,10 @@
+{
+"namespace" : "de.dwi.demo.avro.model",
+"type" : "record",
+"name" : "NetPoint",
+"fields" :
+    [
+    {"name" : "id", "type" : "string"},
+    {"name" : "location", "type" : "Location"}
+    ]
+}

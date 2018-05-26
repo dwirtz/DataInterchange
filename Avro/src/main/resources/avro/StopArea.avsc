@@ -1,0 +1,11 @@
+{
+"namespace" : "de.dwi.demo.avro.model",
+"type" : "record",
+"name" : "StopArea",
+"fields" :
+    [
+    {"name" : "id", "type" : "string"},
+    {"name" : "type", "type" : "StopAreaType"},
+    {"name" : "points", "type" : { "type" : "array", "items" : "NetPoint"}}
+    ]
+}

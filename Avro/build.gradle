@@ -1,0 +1,28 @@
+import com.commercehub.gradle.plugin.avro.GenerateAvroJavaTask
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "com.commercehub.gradle.plugin:gradle-avro-plugin:0.14.1"
+    }
+}
+
+apply plugin: "java"
+apply plugin: "com.commercehub.gradle.plugin.avro-base"
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile "org.apache.avro:avro:1.8.2"
+}
+
+task generateAvro(type: GenerateAvroJavaTask) {
+    source("src/main/resources/avro")
+    outputDir = file("src/main/java")
+}
+
+compileJava.source(generateAvro.outputs)
