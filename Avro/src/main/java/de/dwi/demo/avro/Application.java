@@ -3,7 +3,7 @@ package de.dwi.demo.avro;
 import java.io.IOException;
 
 /**
- * Main application to illustrate the usage of avro.
+ * Main application to illustrate the usage of Apache Avro.
  */
 public class Application {
 

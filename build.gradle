@@ -1,10 +1,12 @@
+group 'de.dwi.demo'
+
 buildscript {
     repositories {
         jcenter()
     }
 }
 
-group 'de.dwi.demo'
+apply plugin: 'base'
 apply plugin: 'java'
 
 task wrapper(type: Wrapper) {
@@ -17,4 +19,10 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+clean.doFirst {
+    delete "./Protobuf/out"
+    delete "./Thrift/out"
+    delete "./Avro/out"
 }

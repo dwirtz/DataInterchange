@@ -16,7 +16,7 @@ import de.dwi.demo.avro.model.StopAreaType;
 import avro.shaded.com.google.common.collect.Lists;
 
 /**
- * This class represents the provider of the sample data by serializing this data using avro.
+ * This class represents the provider of the sample data by serializing this data using Apache Avro.
  */
 final class DataProvider {
 

@@ -15,7 +15,7 @@ import de.dwi.demo.avro.model.StopArea;
 class DataConsumer {
 
     /**
-     * Consumes the sample data stored in the file {@code targetSource} by deserializing the content using avro.
+     * Consumes the sample data stored in the file {@code targetSource} by deserializing the content using Apache Avro.
      *
      * @param targetResource
      *         The absolute or relative path to the file the sample data can be consumed from.
@@ -24,11 +24,11 @@ class DataConsumer {
      *         iff consumer is not able to read the file.
      */
     void consume(final String targetResource) throws IOException {
-       final DatumReader<StopArea> reader = new SpecificDatumReader<StopArea>(StopArea.class);
+        final DatumReader<StopArea> reader = new SpecificDatumReader<StopArea>(StopArea.class);
         final DataFileReader fileReader = new DataFileReader<>(new File(targetResource), reader);
 
         StopArea stopArea = null;
-        while(fileReader.hasNext()){
+        while (fileReader.hasNext()) {
             stopArea = (StopArea) fileReader.next();
         }
 
