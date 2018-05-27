@@ -1,0 +1,33 @@
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "gradle.plugin.org.jruyi.gradle:thrift-gradle-plugin:0.4.0"
+    }
+}
+
+apply plugin: "java"
+apply plugin: "org.jruyi.thrift"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.apache.thrift:libthrift:0.11.0'
+}
+
+compileThrift {
+    thriftExecutable "src/main/resources/compiler/thrift-0.11.0.exe"
+
+    sourceDir "src/main/resources/thrift/StopArea.thrift"
+    outputDir "src/main/java"
+
+    recurse true
+    createGenFolder false
+
+    generator 'java', 'private-members'
+}
