@@ -3,7 +3,7 @@ package de.dwi.demo.protobuf;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-import de.dwi.demo.protobuf.model.Model;
+import de.dwi.demo.protobuf.model.StopAreaWrapper;
 
 /**
  * This class represents the consumer of the sample data.
@@ -20,7 +20,7 @@ class DataConsumer {
      *         iff consumer is not able to read the file.
      */
     void consume(final String targetSource) throws IOException {
-        final Model.StopArea stopArea = Model.StopArea.parseFrom(new FileInputStream(targetSource));
+        final StopAreaWrapper.StopArea stopArea = StopAreaWrapper.StopArea.parseFrom(new FileInputStream(targetSource));
 
         System.out.println(stopArea);
     }

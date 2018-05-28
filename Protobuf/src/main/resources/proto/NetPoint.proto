@@ -1,0 +1,12 @@
+syntax = "proto2";
+package demo;
+
+import "Location.proto";
+
+option java_package = "de.dwi.demo.protobuf.model";
+option java_outer_classname="NetPointWrapper";
+
+message NetPoint {
+    required string id = 1;
+    required Location location = 2;
+}
